@@ -13,9 +13,10 @@ input.addEventListener('keydown', function(e) {
   }
 })
 
-divs = document.querySelectorAll('div')
+const divs = document.querySelectorAll('div')
 
 function bubble(e) {
+  e.stopPropagation()
   console.log(this.firstChild.nodeValue.trim() + ' bubbled')
 }
 
